@@ -1,3 +1,45 @@
-body{
-    background-color: rebeccapurple;
+@import 'reset';
+
+@mixin absolute(){
+    position: absolute;
 }
+
+@mixin img-fit(){
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+@mixin mg-center(){
+    margin: 0 auto;
+}
+body {
+    background-color: rebeccapurple;
+    min-height: 500vh;
+}
+
+#header{
+    background: linear-gradient(341.81deg, #E1B0FF 19.26%, #FF84FB 64.69%, #F3B08E 113.77%, #C978FB 123.97%);
+    height: 500px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-top: 2em;
+    .hikari-vector{
+        @include img-fit();
+        // @include mg-center();
+        width: 100%;
+        filter: drop-shadow(-7px 4px 0px rgba(0, 0, 0, 0.25));
+    }
+
+    .hikari-logo{
+        @include img-fit();
+        @include absolute();
+        bottom: 4%;
+        left: 50%;
+        height: 36%;
+        transform: translate(-50%);
+    }
+}
+
+
