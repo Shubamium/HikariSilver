@@ -200,6 +200,10 @@ h1, h2, h3 {
   border: 1px solid rgba(255, 255, 255, 0.5490196078);
   border-radius: 80px;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 #about::after {
   content: url("../assets/decoration/star_1.svg");

@@ -205,6 +205,8 @@ h1,h2,h3{
         border: 1px solid #ffffff8c;
         border-radius: 80px;
         z-index: 1;
+        user-select: none;
+        pointer-events: none;
     }
     &::after{
         content:url('../assets/decoration/star_1.svg');
