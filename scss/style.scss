@@ -219,3 +219,99 @@ h1,h2,h3{
         filter: drop-shadow(0px 0px 15px #ed47f975);
     }
 }
+
+#social{
+    max-width: 1000px;
+    @include mg-center();
+    margin-top: 120px;
+    & .section-header{
+         background: linear-gradient(180deg, #FAA5CD 0%, #FC9AE7 100%);
+         display: flex;
+         align-items: center;
+         justify-content: stretch;
+         padding: 0 .2em;
+         border-radius: 2em 2em 0 0 ;
+         & hr{
+            width: 100%;
+            margin: 2em;
+            border: none;
+            border-bottom: 2px solid $paleGold;
+         }
+         & .title{
+            font-size: 2.4rem;
+            padding: -2em 0;
+         }
+         & .decor_star{
+           @include img-fit();
+           height: 50px;
+           object-fit: contain;
+           scale: 1.4;
+           animation: speen 25s infinite linear;
+          
+           &:last-child{
+              animation: speen 25s reverse infinite linear;
+            }
+         }
+    }
+
+    & .links{
+        min-height: 500px;
+        background: linear-gradient(180deg, #CE88D5 0%, #A472D0 100%, #250E38 100%);
+        border-radius: 0 0 2em 2em;
+        & .link{
+            display:inline-block;
+            aspect-ratio: 1/1;
+            position: relative;
+            background: linear-gradient(180deg, #D884FF 0%, rgba(255, 208, 106, 0.74) 59.53%, rgba(255, 208, 106, 0) 97.03%);
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 50%;
+            max-width: 150px;
+            padding: 1em;
+            gap: .2em;
+            & .link_title{
+                position: relative;
+                font-family: $fontCinzel;
+                color: $white;
+                background-color: $silver;
+                font-size: .8rem;
+                padding:  0 2em;
+                white-space: nowrap;
+                border-radius: 2em;
+                letter-spacing: 3px;
+            }
+            & .link_icon{
+                font-size: 5rem;
+                color: $silver;
+                position: relative;
+            }
+            & .link_a{
+                width: 100%;
+                height: 100%;
+                background-color: #1a191b30;
+                @include absolute();
+                border-radius: 50%;
+                opacity: .02;
+                z-index: 100;
+
+            }
+
+            &::before{
+                content: '';
+                @include absolute();
+                width: 100%;
+                height: 100%;
+                rotate: 45deg;
+                // background-color: red;
+                border: 2px solid $white;
+                scale: .8;
+                transform-origin: center;
+                opacity: .6;
+                bottom:0%;
+            }
+
+        }
+    }
+}
