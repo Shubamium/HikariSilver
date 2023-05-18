@@ -1,7 +1,10 @@
 @import 'reset';
 
-@mixin absolute(){
+@mixin absolute($anchor:false){
     position: absolute;
+    @if $anchor {
+        transform: translate(-50%);
+    }
 }
 
 @mixin img-fit(){
@@ -34,11 +37,22 @@ body {
 
     .hikari-logo{
         @include img-fit();
-        @include absolute();
+        @include absolute(true);
         bottom: 4%;
         left: 50%;
         height: 36%;
-        transform: translate(-50%);
+    }
+
+    .decor_dashed-border{
+        @include img-fit();
+        @include absolute(true);
+        max-width: min(100vw,1000px);
+        width: 92vw;
+        height: 93%;
+        object-fit: fill;
+        bottom: 3%;
+        left: 50%;
+        opacity: .6;
     }
 }
 
