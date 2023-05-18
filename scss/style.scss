@@ -1,5 +1,10 @@
 @import 'reset';
 
+$gold:#FFD06A;
+
+button:hover{
+    cursor: pointer;
+}
 @mixin absolute($anchor:false){
     position: absolute;
     @if $anchor {
@@ -81,4 +86,27 @@ body {
     background: linear-gradient(180deg, #96379C 0%, #C36BAE 100%);
     border: 2px solid #FDEFED;
     box-shadow: 0px 2px 11px #A65E9B;
+    margin: 0 auto;
+    width: fit-content;
+    position: relative;
+    padding: .5em 1em;
+    transform: translateY(-50%);
+
+    display: flex;
+    justify-content: space-around;
+    border-radius: 2em;
+    gap: .4em;
+    .btn{
+        background:none;
+        color:white;
+        padding: .4em 2em;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 1em;
+        transition: all 250ms ease;
+        &:hover, &.selected{
+            background-color: #7B1778;
+            color: $gold;
+        }
+    }
 }

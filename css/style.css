@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 @keyframes speen {
   from {
     rotate: 0deg;
@@ -82,4 +86,27 @@ body {
   background: linear-gradient(180deg, #96379C 0%, #C36BAE 100%);
   border: 2px solid #FDEFED;
   box-shadow: 0px 2px 11px #A65E9B;
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  padding: 0.5em 1em;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 2em;
+  gap: 0.4em;
+}
+#nav .btn {
+  background: none;
+  color: white;
+  padding: 0.4em 2em;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 1em;
+  transition: all 250ms ease;
+}
+#nav .btn:hover, #nav .btn.selected {
+  background-color: #7B1778;
+  color: #FFD06A;
 }
