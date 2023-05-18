@@ -1,5 +1,6 @@
 @import 'reset';
 @import 'fonts';
+@import 'utilities';
 
 $gold:#FFD06A;
 $paleGold:#FCEBB5;
@@ -130,7 +131,7 @@ h1,h2,h3{
     background-color: $silver;
     max-width: 1100px;
     margin: 2em auto;
-    border-radius:  0 200px 0 0;
+    border-radius:  0 230px 0 0;
     min-height: 350px;
     display: grid;
     grid-template-columns: 2fr 3fr;
@@ -190,5 +191,29 @@ h1,h2,h3{
             color: $white;
             margin:2em;
         }
+    }
+
+    position: relative;
+    &::before{
+        content:"";
+        @include absolute(true);
+        width:97%;
+        height: 90%;
+        left: 50%;
+        bottom: 5%;
+        // background-color: white/;
+        border: 1px solid #ffffff8c;
+        border-radius: 80px;
+        z-index: 1;
+    }
+    &::after{
+        content:url('../assets/decoration/star_1.svg');
+        @include absolute();
+        top: 0%;
+        right: 2px;
+        scale: .75;
+        animation: speen 18s infinite linear;
+        z-index: 2;
+        filter: drop-shadow(0px 0px 15px #ed47f975);
     }
 }
