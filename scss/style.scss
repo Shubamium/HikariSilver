@@ -12,7 +12,14 @@
     max-height: 100%;
     object-fit: contain;
 }
-
+@keyframes speen{
+    from{
+        rotate:0deg;
+    }
+    to{
+        rotate:360deg;
+    }
+}
 @mixin mg-center(){
     margin: 0 auto;
 }
@@ -46,13 +53,23 @@ body {
     .decor_dashed-border{
         @include img-fit();
         @include absolute(true);
-        max-width: min(100vw,1000px);
+        max-width: min(100vw,1200px);
         width: 92vw;
         height: 93%;
         object-fit: fill;
         bottom: 3%;
         left: 50%;
         opacity: .6;
+    }
+
+    .decor_moon-ct{
+         @include img-fit();
+         @include absolute(true);
+         top: 30%;
+         left: 50%;
+         z-index: 0;
+         animation: speen 125s linear infinite;
+         transform-origin: 0% 50%;
     }
 }
 

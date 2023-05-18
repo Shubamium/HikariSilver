@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+@keyframes speen {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
 body {
   background-color: rebeccapurple;
   min-height: 500vh;
@@ -43,7 +51,7 @@ body {
      object-fit: contain;
   position: absolute;
   transform: translate(-50%);
-  max-width: min(100vw, 1000px);
+  max-width: min(100vw, 1200px);
   width: 92vw;
   height: 93%;
   -o-object-fit: fill;
@@ -51,4 +59,17 @@ body {
   bottom: 3%;
   left: 50%;
   opacity: 0.6;
+}
+#header .decor_moon-ct {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  transform: translate(-50%);
+  top: 30%;
+  left: 50%;
+  z-index: 0;
+  animation: speen 125s linear infinite;
+  transform-origin: 0% 50%;
 }
