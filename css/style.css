@@ -253,7 +253,7 @@ h1, h2, h3 {
   animation: speen 25s reverse infinite linear;
 }
 #social .links {
-  min-height: 600px;
+  min-height: 550px;
   background: linear-gradient(180deg, #CE88D5 0%, #A472D0 100%, #250E38 100%), url("..//assets/image/hikari_shadow1.png");
   background-blend-mode: multiply;
   background-position: center bottom;
@@ -287,6 +287,7 @@ h1, h2, h3 {
   white-space: nowrap;
   border-radius: 2em;
   letter-spacing: 3px;
+  text-align: center;
 }
 #social .links .link .link_icon {
   font-size: 5rem;
@@ -308,11 +309,38 @@ h1, h2, h3 {
   width: 100%;
   height: 100%;
   rotate: 45deg;
-  border: 2px solid #FAEDF6;
+  border: 4px solid #FAEDF6;
   scale: 0.8;
   transform-origin: center;
-  opacity: 0.6;
+  opacity: 0.4;
   bottom: 0%;
+}
+#social .links .link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  rotate: 0deg;
+  border: 4px solid #FAEDF6;
+  scale: 0.6;
+  transform-origin: center;
+  opacity: 0;
+  bottom: 0%;
+  transition: all 250ms ease;
+}
+#social .links .link:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  rotate: 135deg;
+  border: 6px solid #FF84FB;
+  scale: 0.84;
+  transform-origin: center;
+  opacity: 1;
+  z-index: -1;
+  bottom: 0%;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.196);
 }
 #social .links .side {
   display: grid;
@@ -321,7 +349,7 @@ h1, h2, h3 {
 }
 #social .links .side .offset-down {
   position: relative;
-  top: 30%;
+  top: 23%;
 }
 #social .links .side .row {
   display: flex;
