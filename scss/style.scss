@@ -2,8 +2,9 @@
 @import 'fonts';
 
 $gold:#FFD06A;
+$paleGold:#FCEBB5;
 $silver:#434760;
-
+$white: #FAEDF6;
 button:hover{
     cursor: pointer;
 }
@@ -38,9 +39,14 @@ body {
 }
 
 *{
+    scroll-behavior: smooth;
     font-family: $fontNova;
 }
 
+h1,h2,h3{
+    font-family: $fontCinzelEX;
+    color: $white;
+}
 #header{
     background: linear-gradient(341.81deg, #E1B0FF 19.26%, #FF84FB 64.69%, #F3B08E 113.77%, #C978FB 123.97%);
     height: 500px;
@@ -90,7 +96,7 @@ body {
 
 #nav{
     background: linear-gradient(180deg, #96379C 0%, #C36BAE 100%);
-    border: 2px solid #FDEFED;
+    border: 2px solid  #FAEDF6;
     box-shadow: 0px 2px 11px #A65E9B;
     margin: 0 auto;
     width: fit-content;
@@ -104,7 +110,7 @@ body {
     gap: .4em;
     .btn{
         background:none;
-        color:white;
+        color:$white;
         padding: .4em 2em;
         font-size: 1.1rem;
         border: none;
@@ -115,6 +121,74 @@ body {
         &:hover, &.selected{
             background-color: #7B1778;
             color: $gold;
+        }
+    }
+}
+
+
+#about{
+    background-color: $silver;
+    max-width: 1100px;
+    margin: 2em auto;
+    border-radius:  0 200px 0 0;
+    min-height: 350px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: end;
+    
+    border: 2px solid $white;
+    .img-part{
+        background:url('../assets/image/hikari-ribbon_half.png');
+        // background-color: red;
+        background-size: cover;
+        background-position: 80% 120%;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        scale: 1.2;
+        transform-origin: bottom;
+        transform: translateY(4px);
+
+    }
+
+    .text-part{
+        align-self: normal;
+        text-align: center;
+        padding-right: 1em;
+        .title{
+            font-size: 4rem;
+            white-space: nowrap;
+            text-align: left;
+            position: relative;
+            left: -15%;
+            margin-top: .3em;
+            margin-bottom: -10px;
+            span{
+                font-weight: normal;
+                font-size: 1.4rem;
+                letter-spacing: 3px;
+                font-family: $fontCinzel;
+            }
+        }
+        .frame{
+            display: flex;
+            flex-grow: 1;
+            justify-content: stretch;
+            align-items: center;
+            white-space: nowrap;
+            color:$paleGold;
+            gap: 1em;
+            max-width: 60%;
+            margin: 0 auto;
+            hr{
+                width: 100%;
+                border-bottom: 2px solid $paleGold;
+            }
+        }
+
+        .paragraph{
+            color: $white;
+            margin:2em;
         }
     }
 }

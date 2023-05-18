@@ -25,7 +25,13 @@ body {
 }
 
 * {
+  scroll-behavior: smooth;
   font-family: "Nova Cut", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Cinzel Decorative", cursive;
+  color: #FAEDF6;
 }
 
 #header {
@@ -89,7 +95,7 @@ body {
 
 #nav {
   background: linear-gradient(180deg, #96379C 0%, #C36BAE 100%);
-  border: 2px solid #FDEFED;
+  border: 2px solid #FAEDF6;
   box-shadow: 0px 2px 11px #A65E9B;
   margin: 0 auto;
   width: -moz-fit-content;
@@ -104,7 +110,7 @@ body {
 }
 #nav .btn {
   background: none;
-  color: white;
+  color: #FAEDF6;
   padding: 0.4em 2em;
   font-size: 1.1rem;
   border: none;
@@ -115,4 +121,66 @@ body {
 #nav .btn:hover, #nav .btn.selected {
   background-color: #7B1778;
   color: #FFD06A;
+}
+
+#about {
+  background-color: #434760;
+  max-width: 1100px;
+  margin: 2em auto;
+  border-radius: 0 200px 0 0;
+  min-height: 350px;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  align-items: end;
+  border: 2px solid #FAEDF6;
+}
+#about .img-part {
+  background: url("../assets/image/hikari-ribbon_half.png");
+  background-size: cover;
+  background-position: 80% 120%;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  scale: 1.2;
+  transform-origin: bottom;
+  transform: translateY(4px);
+}
+#about .text-part {
+  align-self: normal;
+  text-align: center;
+  padding-right: 1em;
+}
+#about .text-part .title {
+  font-size: 4rem;
+  white-space: nowrap;
+  text-align: left;
+  position: relative;
+  left: -15%;
+  margin-top: 0.3em;
+  margin-bottom: -10px;
+}
+#about .text-part .title span {
+  font-weight: normal;
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  font-family: "Cinzel", serif;
+}
+#about .text-part .frame {
+  display: flex;
+  flex-grow: 1;
+  justify-content: stretch;
+  align-items: center;
+  white-space: nowrap;
+  color: #FCEBB5;
+  gap: 1em;
+  max-width: 60%;
+  margin: 0 auto;
+}
+#about .text-part .frame hr {
+  width: 100%;
+  border-bottom: 2px solid #FCEBB5;
+}
+#about .text-part .paragraph {
+  color: #FAEDF6;
+  margin: 2em;
 }
