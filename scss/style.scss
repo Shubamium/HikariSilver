@@ -1,4 +1,5 @@
 @import 'reset';
+@import 'fonts';
 
 $gold:#FFD06A;
 
@@ -33,6 +34,10 @@ body {
     background: url('../assets/pattern/purple_cross.png'),rgb(255, 255, 255);
     background-blend-mode: multiply;
     min-height: 500vh;
+}
+
+*{
+    font-family: $fontNova;
 }
 
 #header{
@@ -104,6 +109,8 @@ body {
         border: none;
         border-radius: 1em;
         transition: all 250ms ease;
+        font-family: $fontNova;
+
         &:hover, &.selected{
             background-color: #7B1778;
             color: $gold;
