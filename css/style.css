@@ -217,7 +217,7 @@ h1, h2, h3 {
 }
 
 #social {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   margin-top: 120px;
 }
@@ -253,15 +253,22 @@ h1, h2, h3 {
   animation: speen 25s reverse infinite linear;
 }
 #social .links {
-  min-height: 500px;
-  background: linear-gradient(180deg, #CE88D5 0%, #A472D0 100%, #250E38 100%);
+  min-height: 600px;
+  background: linear-gradient(180deg, #CE88D5 0%, #A472D0 100%, #250E38 100%), url("..//assets/image/hikari_shadow1.png");
+  background-blend-mode: multiply;
+  background-position: center bottom;
+  background-repeat: no-repeat;
   border-radius: 0 0 2em 2em;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 2em;
 }
 #social .links .link {
   display: inline-block;
   aspect-ratio: 1/1;
   position: relative;
   background: linear-gradient(180deg, #D884FF 0%, rgba(255, 208, 106, 0.74) 59.53%, rgba(255, 208, 106, 0) 97.03%);
+  scale: 0.8;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -306,4 +313,18 @@ h1, h2, h3 {
   transform-origin: center;
   opacity: 0.6;
   bottom: 0%;
+}
+#social .links .side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3em;
+}
+#social .links .side .offset-down {
+  position: relative;
+  top: 30%;
+}
+#social .links .side .row {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
 }
