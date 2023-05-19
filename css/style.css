@@ -258,7 +258,6 @@ h1, h2, h3 {
   background-blend-mode: multiply;
   background-position: center bottom;
   background-repeat: no-repeat;
-  border-radius: 0 0 2em 2em;
   display: flex;
   justify-content: space-between;
   padding: 2em 2em;
@@ -355,4 +354,11 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   gap: 5em;
+}
+
+#schedule {
+  margin: -10px;
+  border: 5px solid #FFD06A;
+  background-color: #434760;
+  min-height: 400px;
 }
