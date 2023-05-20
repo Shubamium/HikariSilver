@@ -416,3 +416,28 @@ h1, h2, h3 {
   font-size: 2rem;
   color: #FFD06A;
 }
+
+#gallery {
+  min-height: 800px;
+  background: #E1B0FF;
+  border-radius: 0 0 5em 5em;
+  padding-top: 3em;
+}
+#gallery .gallery-lens {
+  height: 650px;
+  background-color: #985FCA;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  width: 650px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#gallery .gallery-lens img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #8749b9;
+  scale: 0.95;
+  border-radius: 50%;
+}

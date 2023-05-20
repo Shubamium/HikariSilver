@@ -430,3 +430,29 @@ h1,h2,h3{
         }
     }
 }
+
+
+#gallery{
+    min-height: 800px;
+    background: #E1B0FF;
+    border-radius: 0 0 5em 5em;
+    padding-top: 3em;
+    .gallery-lens{
+        height: 650px;
+        background-color: #985FCA;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+
+        width: 650px;
+        @include mg-center();
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-color: #8749b9;
+            scale: .95;
+            border-radius: 50%;
+        }
+    }
+}
