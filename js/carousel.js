@@ -1,5 +1,4 @@
 let carouselImgEl = document.getElementById('carousel-img');
-
 let currentImgId = 0;
 
 let imageList = [

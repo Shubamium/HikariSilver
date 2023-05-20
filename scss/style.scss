@@ -430,20 +430,48 @@ h1,h2,h3{
 
 #gallery{
     min-height: 800px;
-    background: #E1B0FF;
+    background: #240339ba;
     border-radius: 0 0 5em 5em;
-    padding-top: 3em;
+    padding-top: 100px;
+    margin-top: 10px;
     position: relative;
-
+    .gallery-header{
+        @extend #nav;
+        min-width: 400px;
+        text-align: center;
+        position: relative;
+        .decor_wand-top{
+            @include absolute(true);
+            z-index: -1;
+            bottom: -90px;
+            left:110px;
+            scale:.7;
+            transform-origin: center;
+            display: block;
+            // background-color: red;
+        }
+        @include absolute(true);
+        position: absolute;
+        top: 17%;
+        z-index: 10;
+        left: 50%;
+        h2{
+            font-size: 1.4rem;
+            padding: 0;
+            line-height: 80%;
+        }
+    }
     .gallery-lens{
         height: 650px;
         background-color: #985FCA;
         aspect-ratio: 1/1;
         border-radius: 50%;
-
+        box-shadow: 0px 0px 4px 4px #10022111;
         width: 650px;
         @include mg-center();
         // overflow: hidden;
+        position: relative;
+        z-index: 0;
         img{
             width: 100%;
             height: 100%;
@@ -459,23 +487,27 @@ h1,h2,h3{
         bottom: 50%;
         left: 50%;
         // background-color: red;
-        width: 800px;
+        width: 750px;
 
         display: flex;
         transform-origin: center;
         justify-content: space-between;
         $buttonHeight:200px;
+
         .btn-controls{
             @extend .btn;
             height: $buttonHeight;
             position: relative;
             top: $buttonHeight/2 ;
             padding: 0 .2em;
-            background: #595D73;
+            background: #8749b9;
             border-radius: 1em 0 0 1em;
+            box-shadow: 0px 0px 4px 4px #00000011;
+
             &:last-child{
                 border-radius: 0 1em 1em 0;
             }
+            font-size: 2rem;
            
         }
     }
