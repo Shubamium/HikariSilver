@@ -9,8 +9,23 @@
   text-decoration: underline;
 }
 
-button:hover {
+.btn, #gallery .gallery-controls .btn-controls {
+  background: none;
+  color: #FAEDF6;
+  padding: 0.4em 2em;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 1em;
+  transition: all 250ms ease;
+  font-family: "Nova Cut", sans-serif;
+}
+.btn:hover, #gallery .gallery-controls .btn-controls:hover, .btn.selected, #gallery .gallery-controls .selected.btn-controls {
+  background-color: #7B1778;
+  color: #FFD06A;
   cursor: pointer;
+}
+.btn:active, #gallery .gallery-controls .btn-controls:active {
+  scale: 0.94;
 }
 
 @keyframes speen {
@@ -113,20 +128,6 @@ h1, h2, h3 {
   justify-content: space-around;
   border-radius: 2em;
   gap: 0.4em;
-}
-#nav .btn {
-  background: none;
-  color: #FAEDF6;
-  padding: 0.4em 2em;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 1em;
-  transition: all 250ms ease;
-  font-family: "Nova Cut", sans-serif;
-}
-#nav .btn:hover, #nav .btn.selected {
-  background-color: #7B1778;
-  color: #FFD06A;
 }
 
 #about {
@@ -422,6 +423,7 @@ h1, h2, h3 {
   background: #E1B0FF;
   border-radius: 0 0 5em 5em;
   padding-top: 3em;
+  position: relative;
 }
 #gallery .gallery-lens {
   height: 650px;
@@ -430,7 +432,6 @@ h1, h2, h3 {
   border-radius: 50%;
   width: 650px;
   margin: 0 auto;
-  overflow: hidden;
 }
 #gallery .gallery-lens img {
   width: 100%;
@@ -440,4 +441,25 @@ h1, h2, h3 {
   background-color: #8749b9;
   scale: 0.95;
   border-radius: 50%;
+}
+#gallery .gallery-controls {
+  position: absolute;
+  transform: translate(-50%);
+  bottom: 50%;
+  left: 50%;
+  width: 800px;
+  display: flex;
+  transform-origin: center;
+  justify-content: space-between;
+}
+#gallery .gallery-controls .btn-controls {
+  height: 200px;
+  position: relative;
+  top: 100px;
+  padding: 0 0.2em;
+  background: #595D73;
+  border-radius: 1em 0 0 1em;
+}
+#gallery .gallery-controls .btn-controls:last-child {
+  border-radius: 0 1em 1em 0;
 }
