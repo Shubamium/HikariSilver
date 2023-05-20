@@ -548,5 +548,28 @@ h1,h2,h3{
             color: $white;
             text-decoration: none;
         }
+        .decor{
+            display: flex;
+            @include absolute(true);
+            bottom: 30%;
+            left: 24%;
+            scale: .7;
+            img{
+                object-fit: contain;
+            }
+            .decor_star{
+                scale: 1.2;
+                animation: speen 25s linear infinite;
+            }
+            .decor_list{
+                $listScale:1;
+                scale: $listScale;
+                position: relative;
+                top: 50px;
+                &.r{
+                    scale: $listScale*-1 1;
+                }
+            }
+        }
     }
 }

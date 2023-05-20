@@ -534,3 +534,27 @@ h1, h2, h3 {
   color: #FAEDF6;
   text-decoration: none;
 }
+#gallery .gallery-info .decor {
+  display: flex;
+  position: absolute;
+  transform: translate(-50%);
+  bottom: 30%;
+  left: 24%;
+  scale: 0.7;
+}
+#gallery .gallery-info .decor img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#gallery .gallery-info .decor .decor_star {
+  scale: 1.2;
+  animation: speen 25s linear infinite;
+}
+#gallery .gallery-info .decor .decor_list {
+  scale: 1;
+  position: relative;
+  top: 50px;
+}
+#gallery .gallery-info .decor .decor_list.r {
+  scale: -1 1;
+}
