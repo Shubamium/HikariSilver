@@ -332,9 +332,6 @@ h1, h2, h3 {
 }
 #social .links .link:hover::after {
   content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
   rotate: 135deg;
   border: 6px solid #FF84FB;
   scale: 0.84;
@@ -557,4 +554,146 @@ h1, h2, h3 {
 }
 #gallery .gallery-info .decor .decor_list.r {
   scale: -1 1;
+}
+
+#support {
+  background: linear-gradient(180deg, #E57DEE 0%, #985FCA 100%);
+  max-width: 1200px;
+  border-radius: 2em 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 100px auto;
+  overflow: hidden;
+}
+#support .links {
+  background-color: #434760;
+  padding: 5em 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+#support .links .link {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1em;
+  position: relative;
+}
+#support .links .link .text .name {
+  font-family: "Cinzel", serif;
+  font-size: 1.2rem;
+}
+#support .links .link .icon {
+  border-radius: 1em;
+  background-color: #595D73;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#support .links .link .icon:hover {
+  cursor: pointer;
+}
+#support .links .link .icon i, #support .links .link .icon .i {
+  font-size: 2.4rem;
+  color: #FAEDF6;
+  pointer-events: none;
+}
+#support .links .link .icon .i {
+  font-family: sans-serif;
+  letter-spacing: 3px;
+}
+#support .links .link .icon::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 3px solid #FF84FB;
+  scale: 0.8;
+  position: absolute;
+  opacity: 0;
+}
+#support .links .link .icon::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 3px solid #FF84FB;
+  scale: 0.8;
+  position: absolute;
+  opacity: 0;
+}
+#support .links .link .icon::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 3px solid #FAEDF6;
+  rotate: 135deg;
+  scale: 0.8;
+  opacity: 0.2;
+  position: absolute;
+}
+#support .links .link .icon:hover::after {
+  opacity: 1;
+  scale: 0.9;
+  rotate: 135deg;
+  transition: all 250ms ease;
+}
+#support .links .link .link_a {
+  color: #FFD06A;
+  font-family: "Nova Cut", sans-serif;
+  font-size: 0.7rem;
+}
+#support .links .link .link_a:active {
+  color: #FFD06A;
+}
+#support .title-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1000;
+}
+#support .title-card hr {
+  width: 60%;
+  border: none;
+  border-bottom: 2px solid #FAEDF6;
+  border-radius: 2em;
+  margin: 0.42em 0;
+}
+#support .title-card .title {
+  text-shadow: 0px 0px 10px rgba(19, 19, 5, 0.112);
+  font-size: 3rem;
+}
+#support .title-card .sub-title {
+  color: #FFD06A;
+  font-size: 1.4rem;
+  font-family: "Cinzel", serif;
+}
+#support .title-card .decor_frame {
+  position: absolute;
+  z-index: -1;
+}
+#support .title-card .decor_frame.top {
+  left: 1%;
+  top: 1%;
+}
+#support .title-card .decor_frame.bottom {
+  bottom: 1%;
+  right: 1%;
+  scale: -1;
+}
+#support .title-card .decor_shadow {
+  opacity: 0.7;
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  scale: 1;
+  max-width: 60%;
+  z-index: -1;
+  transform-origin: center;
+}
+#support .title-card .decor_diamond {
+  position: absolute;
+  right: 2%;
+  top: 2%;
 }
