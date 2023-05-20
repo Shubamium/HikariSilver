@@ -420,7 +420,7 @@ h1, h2, h3 {
 
 #gallery {
   min-height: 800px;
-  background: rgba(36, 3, 57, 0.7294117647);
+  background: url("../assets/pattern/diamond_star.png"), #E1B0FF;
   border-radius: 0 0 5em 5em;
   padding-top: 100px;
   margin-top: 10px;
@@ -472,6 +472,16 @@ h1, h2, h3 {
   scale: 0.95;
   border-radius: 50%;
 }
+#gallery .gallery-lens::before {
+  content: "";
+  background-color: #985FCA;
+  position: absolute;
+  transform: translate(-50%);
+  width: 40%;
+  height: 120px;
+  left: 50%;
+  top: 90%;
+}
 #gallery .gallery-controls {
   position: absolute;
   transform: translate(-50%);
@@ -494,4 +504,33 @@ h1, h2, h3 {
 }
 #gallery .gallery-controls .btn-controls:last-child {
   border-radius: 0 1em 1em 0;
+}
+#gallery .gallery-info {
+  position: absolute;
+  transform: translate(-50%);
+  background-color: #434760;
+  bottom: 10%;
+  left: 50%;
+  width: 600px;
+  padding: 0.3em;
+  border-radius: 2em;
+  text-align: center;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.263);
+}
+#gallery .gallery-info h2 {
+  font-size: 0.9rem;
+  color: #FFD06A;
+  font-family: "Nova Cut", sans-serif;
+  font-weight: normal;
+}
+#gallery .gallery-info hr {
+  border: none;
+  border-bottom: 2px solid rgba(255, 238, 255, 0.2235294118);
+  max-width: 30%;
+  margin: 0.2em auto;
+}
+#gallery .gallery-info #link {
+  font-size: 1.4rem;
+  color: #FAEDF6;
+  text-decoration: none;
 }
