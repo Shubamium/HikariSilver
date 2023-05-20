@@ -141,14 +141,16 @@
             Fan Art
         </div>
         <div class="gallery-lens">
-            <img src="" alt="" class="gallery-img">
+            <img id="carousel-img" src="https://i.ibb.co/X8qXSTD/fanart1-min-1.png" alt="" class="gallery-img">
         </div>
         <div class="gallery-controls">
-            <button class="btn-controls">Prev</button>
-            <button class="btn-controls">Next</button>
+            <button class="btn-controls" onclick="changeCarousel(-1)">Prev</button>
+            <button class="btn-controls" onclick="changeCarousel(1)">Next</button>
         </div>
         <div class="gallery-info">
         </div>
     </section>
+    <!-- Carousel Script -->
+    <script src="js/carousel.js"></script>
 </body>
 </html>
