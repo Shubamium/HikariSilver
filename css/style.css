@@ -26,6 +26,8 @@ body {
   background: url("../assets/pattern/purple_cross.png"), rgb(255, 255, 255);
   background-blend-mode: multiply;
   min-height: 500vh;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 * {
@@ -360,5 +362,57 @@ h1, h2, h3 {
   margin: -10px;
   border: 5px solid #FFD06A;
   background-color: #434760;
-  min-height: 400px;
+  min-height: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: stretch;
+}
+#schedule .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  max-width: 1500px;
+  padding-left: 2em;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  gap: 3em;
+}
+#schedule .scheds {
+  height: 80%;
+}
+#schedule .scheds .scheds-container {
+  background-color: #434760;
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.2);
+  border: 2px solid #FAEDF6;
+  border-radius: 1em;
+  height: 100%;
+  overflow: hidden;
+}
+#schedule .scheds .scheds-container .sched-img {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 4, 5, 0.466);
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#schedule .text {
+  background-color: #895AB0;
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.2);
+  padding: 1em 1.2em;
+}
+#schedule .text .title {
+  font-size: 3.2rem;
+}
+#schedule .text hr {
+  border: 1px solid #FAEDF6;
+  opacity: 0.67;
+  border-radius: 2em;
+  margin: -0.2em 1em;
+}
+#schedule .text .sub-title {
+  margin: 0.2em;
+  font-size: 2rem;
+  color: #FFD06A;
 }
