@@ -745,6 +745,7 @@ h1,h2,h3{
 }
 
 #contact{
+    box-shadow: 0px 0px 14px 7px rgba(43, 19, 50, 0.255);
     background:linear-gradient(123.02deg, #C85FFF 30.3%, #FFD06A 73.41%);
     .title{
         font-size: 3rem;
@@ -753,6 +754,7 @@ h1,h2,h3{
         text-align: right;
         text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.293);
     }
+    padding-bottom: 10px;
     .content{
         background: url('../assets/pattern/checker.png'),$silver;
         background-attachment: fixed;
