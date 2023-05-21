@@ -465,9 +465,18 @@ h1, h2, h3 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  background-color: #8749b9;
+  background-color: #7c1ca1;
   scale: 0.95;
   border-radius: 50%;
+  transition: all 250ms ease;
+}
+#gallery .gallery-lens img:hover {
+  border-radius: 0;
+  border: 3px solid white;
+  -o-object-fit: contain;
+     object-fit: contain;
+  scale: 0.8;
+  z-index: 1000;
 }
 #gallery .gallery-lens::before {
   content: "";
@@ -526,7 +535,7 @@ h1, h2, h3 {
   max-width: 30%;
   margin: 0.2em auto;
 }
-#gallery .gallery-info #link {
+#gallery .gallery-info #carousel-link {
   font-size: 1.4rem;
   color: #FAEDF6;
   text-decoration: none;
