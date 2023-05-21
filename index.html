@@ -221,26 +221,31 @@
         <h2 class="title">Contact</h2>
         <div class="content">
             <div class="center">
-                <div class="img-part"></div>
+                <div class="img-part">
+                    <img src="assets/image/hikari_headband.png" alt="">
+                </div>
                 <div class="text-part">
                     <div class="text">
                         <h2>For Business Inquiries:</h2>
-                        <p>hikarisilver@gmail.com</p>
+                        <a class="email" href="mailto:@hikarisilver.com">hikarisilver@gmail.com</a>
                     </div>
                     <div class="text">
                         <h2>Or Send Me A message:</h2>
                         <form action="">
                             <div class="form-field">
                                 <label for="name">Name:</label>
-                                <input type="text" max="50" name="name" required>
+                                <input type="text" max="50" name="name" placeholder="Enter your name here!" required>
                             </div>
                             <div class="form-field">
                                 <label for="email">Email:</label>
-                                <input type="email" name="email"required>
+                                <input type="email" name="email" placeholder="Enter your email here!" required>
                             </div>
-                            <label for="message">Message:</label>
-                            <textarea name="message" required placeholder="Write your messages here!"></textarea>
-                            <button type="submit">Send <i class="fa fa-send"></i></button>
+                            
+                            <div class="message">
+                                <label for="message">Message:</label>
+                                <textarea name="message" style="resize:none" required placeholder="Write your messages here!"></textarea>
+                                 <button type="submit" class="btn-send">Send <i class="fa fa-send"></i></button>
+                            </div>
                         </form>
                     </div>
                 </div>

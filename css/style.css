@@ -9,7 +9,7 @@
   text-decoration: underline;
 }
 
-.btn, #gallery .gallery-controls .btn-controls {
+.btn, #contact .content .center .text-part .text .btn-send, #gallery .gallery-controls .btn-controls {
   background: none;
   color: #FAEDF6;
   padding: 0.4em 2em;
@@ -19,12 +19,12 @@
   transition: all 250ms ease;
   font-family: "Nova Cut", sans-serif;
 }
-.btn:hover, #gallery .gallery-controls .btn-controls:hover, .btn.selected, #gallery .gallery-controls .selected.btn-controls {
+.btn:hover, #contact .content .center .text-part .text .btn-send:hover, #gallery .gallery-controls .btn-controls:hover, .btn.selected, #contact .content .center .text-part .text .selected.btn-send, #gallery .gallery-controls .selected.btn-controls {
   background-color: #7B1778;
   color: #FFD06A;
   cursor: pointer;
 }
-.btn:active, #gallery .gallery-controls .btn-controls:active {
+.btn:active, #contact .content .center .text-part .text .btn-send:active, #gallery .gallery-controls .btn-controls:active {
   scale: 0.94;
 }
 
@@ -40,7 +40,7 @@ body {
   background-color: rgb(255, 255, 255);
   background: url("../assets/pattern/purple_cross.png"), rgb(255, 255, 255);
   background-blend-mode: multiply;
-  min-height: 500vh;
+  min-height: 600vh;
   overflow-x: hidden;
   width: 100vw;
 }
@@ -705,4 +705,87 @@ h1, h2, h3 {
   position: absolute;
   right: 2%;
   top: 2%;
+}
+
+#contact {
+  background: linear-gradient(123.02deg, #C85FFF 30.3%, #FFD06A 73.41%);
+}
+#contact .title {
+  font-size: 3rem;
+  margin-right: 1em;
+  margin-top: 0.4em;
+  text-align: right;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.293);
+}
+#contact .content {
+  background: url("../assets/pattern/checker.png"), #434760;
+  background-attachment: fixed;
+}
+#contact .content .center {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: end;
+}
+#contact .content .center .img-part img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: relative;
+  scale: 1.5;
+  bottom: 110px;
+  right: 20%;
+}
+#contact .content .center .text-part .text {
+  margin: 1em 0;
+}
+#contact .content .center .text-part .text .email {
+  font-size: 2rem;
+  color: #FAEDF6;
+  text-decoration: underline;
+}
+#contact .content .center .text-part .text h2 {
+  font-size: normal;
+  font-weight: 400;
+  font-family: "Cinzel", serif;
+}
+#contact .content .center .text-part .text input, #contact .content .center .text-part .text textarea {
+  width: 100%;
+  background-color: #595D73;
+  border: 2px solid white;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  font-size: 1.2rem;
+  color: #FAEDF6;
+}
+#contact .content .center .text-part .text textarea {
+  min-height: 200px;
+  font-size: 1.4rem;
+}
+#contact .content .center .text-part .text .form-field {
+  display: flex;
+  margin: 1em 0.2em;
+}
+#contact .content .center .text-part .text .form-field label {
+  flex-basis: 14%;
+}
+#contact .content .center .text-part .text label {
+  font-size: 2rem;
+  color: #FAEDF6;
+}
+#contact .content .center .text-part .text .message {
+  margin: 1em 0;
+  display: flex;
+  gap: 0.5em;
+  flex-direction: column;
+  justify-content: stretch;
+}
+#contact .content .center .text-part .text .btn-send {
+  background-color: #FFD06A;
+  color: #434760;
+  max-width: 200px;
+  white-space: nowrap;
+  align-self: flex-end;
 }
