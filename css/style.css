@@ -56,6 +56,7 @@ h1, h2, h3 {
 
 #header {
   background: linear-gradient(341.81deg, #E1B0FF 19.26%, #FF84FB 64.69%, #F3B08E 113.77%, #C978FB 123.97%);
+  background-attachment: fixed;
   height: 500px;
   width: 100%;
   position: relative;
@@ -572,6 +573,7 @@ h1, h2, h3 {
   grid-template-columns: 1fr 2fr;
   margin: 100px auto;
   overflow: hidden;
+  background-attachment: fixed;
 }
 #support .links {
   background-color: #434760;
