@@ -450,7 +450,7 @@ h1,h2,h3{
 #schedule{
     background: url('../assets/pattern/checker.png'),$silver;
     background-attachment: fixed;
-    
+
     margin: -10px;
     border: 5px solid $gold;
     background-color: $silver;
@@ -669,6 +669,8 @@ h1,h2,h3{
 
 #support{
     background: linear-gradient(180deg, #E57DEE 0%, #985FCA 100%);
+    box-shadow: 0px 0px 17px 2px rgba(35, 5, 47, 0.228);
+   
     max-width: 1200px;
     border-radius: 2em 0 0 0;
     display: grid;
@@ -828,15 +830,17 @@ h1,h2,h3{
 }
 
 #contact{
-    box-shadow: 0px 0px 14px 7px rgba(43, 19, 50, 0.255);
-    background:linear-gradient(123.02deg, #C85FFF 30.3%, #FFD06A 73.41%);
+    box-shadow: 0px 0px 7px 4px rgba(43, 19, 50, 0.115);
+    // background:linear-gradient(123.02deg, #dfbe78 -20.3%, #ff96b9 73.41%);
+    background: linear-gradient(123.02deg, #C85FFF 30.3%, #FFD06A 73.41%);
     margin-bottom: 200px;
     .title{
-        font-size: 3rem;
-        margin-right:1em;
-        margin-top:.4em;
+        font-size: 2.2rem;
+        margin-right:1.6em;
+        padding-top:.1em;
         text-align: right;
-        text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.293);
+        color: $silver;
+        text-shadow: 0px 0px 4px rgba(36, 126, 162, 0.293);
     }
     padding-bottom: 10px;
     .content{
@@ -867,6 +871,7 @@ h1,h2,h3{
                         text-decoration: underline;
                     }
                     h2{
+                        opacity: .6;
                         font-size: normal;
                         font-weight: 400;
                         font-family: $fontCinzel;
@@ -874,12 +879,18 @@ h1,h2,h3{
                     input,textarea{
                         width: 100%;
                         background-color: #595D73;
-                        border: 2px solid white;
+                        border: 2px solid rgba(255, 255, 255, 0.372);
                         border-radius: .5em;
                         padding: 0.5em;
                         font-size: 1.2rem;
                         color: $white;
+
+                        &::placeholder{
+                            font-size: 1rem;
+                            opacity: .2;
+                        }
                     }
+                    
                     textarea{
                         min-height: 200px;
                         font-size: 1.4rem;
@@ -909,6 +920,7 @@ h1,h2,h3{
                         @extend .btn;
                         background-color: $gold;
                         color: $silver;
+                        margin: 1em 0;
                         max-width: 200px;
                         white-space: nowrap;
                         align-self: flex-end;
