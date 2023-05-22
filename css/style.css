@@ -459,6 +459,8 @@ h1, h2, h3 {
 }
 
 #schedule {
+  background: url("../assets/pattern/checker.png"), #434760;
+  background-attachment: fixed;
   margin: -10px;
   border: 5px solid #FFD06A;
   background-color: #434760;
