@@ -60,6 +60,32 @@ body {
   font-family: "Nova Cut", sans-serif;
 }
 
+@keyframes wipe {
+  from {
+    stroke-dashoffset: 830;
+  }
+  to {
+    stroke-dasharray: 230;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes wipe2 {
+  40% {
+    stroke-dashoffset: 830;
+  }
+  to {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes setWipe1 {
+  from {
+    stroke-dashoffset: 190;
+  }
+  to {
+    stroke-dashoffset: -200;
+  }
+}
 h1, h2, h3 {
   font-family: "Cinzel Decorative", cursive;
   color: #FAEDF6;
@@ -189,6 +215,17 @@ h1, h2, h3 {
   animation: twinkle 5s infinite;
   transform-origin: 0% 50%;
 }
+#header .decor_starset-l #main #line1 {
+  fill: none;
+  stroke: rgb(255, 255, 255);
+  animation: wipe 2s linear infinite;
+}
+#header .decor_starset-l #main #line2 {
+  stroke-dashoffset: 0;
+  stroke-width: 1;
+  animation: wipe2 2s linear infinite;
+  animation-delay: 500ms;
+}
 #header .decor_starset-r {
   max-width: 100%;
   max-height: 100%;
@@ -203,6 +240,20 @@ h1, h2, h3 {
   animation: twinkle 10s infinite;
   animation-delay: 1s;
   transform-origin: 0% 50%;
+}
+#header .decor_starset-r #main #line1 {
+  stroke-dasharray: 200;
+  animation: setWipe1 3s infinite;
+}
+#header .decor_starset-r #main #line2 {
+  stroke-dasharray: 200;
+  animation: setWipe1 3s infinite;
+  animation-delay: 950ms;
+}
+#header .decor_starset-r #main #line3 {
+  stroke-dasharray: 200;
+  animation: setWipe1 3s infinite;
+  animation-delay: 1800ms;
 }
 
 #nav, #gallery .gallery-header {

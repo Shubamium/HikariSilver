@@ -97,7 +97,36 @@ body {
     font-family: $fontNova;
 }
 
+@keyframes wipe {
+    from{
+        stroke-dashoffset: 830;
+    }
+    to{
+        stroke-dasharray: 230;
+        stroke-dashoffset: 0;
 
+    }
+}
+@keyframes wipe2{
+    40%{
+        stroke-dashoffset: 830;
+    }
+    to{
+        stroke-dasharray: 300;
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes setWipe1 {
+    from{
+        stroke-dashoffset: 190;
+
+    }
+    to{
+        stroke-dashoffset: -200;
+
+    }
+}
 
 h1,h2,h3{
     font-family: $fontCinzelEX;
@@ -184,6 +213,8 @@ h1,h2,h3{
         scale: 1.2;
         z-index: 0;
         transform-origin: 0% 50%;
+
+      
     }
     .decor_starset-l{
         @include img-fit();
@@ -193,6 +224,21 @@ h1,h2,h3{
         scale:.8;
         animation: twinkle 5s infinite;
         transform-origin: 0% 50%;
+
+        #main{
+            #line1{
+                fill: none;
+                stroke: rgb(255, 255, 255);
+                animation:wipe 2s linear infinite;
+            }
+            #line2{
+                stroke-dashoffset: 0;
+                stroke-width:1;
+                animation:wipe2 2s linear infinite;
+                animation-delay: 500ms;
+                
+            }
+        }
     }
     .decor_starset-r{
         @include img-fit();
@@ -204,6 +250,23 @@ h1,h2,h3{
         animation: twinkle 10s infinite;
         animation-delay: 1s;
         transform-origin: 0% 50%;
+        #main{
+            $duration:3s;
+            #line1{
+                stroke-dasharray: 200;
+                animation:setWipe1 $duration infinite;
+            }
+            #line2{
+                stroke-dasharray:200;
+                animation:setWipe1 $duration infinite;
+                animation-delay: 950ms;
+            }
+            #line3{
+                stroke-dasharray: 200;
+                animation:setWipe1 $duration infinite;
+                animation-delay: 1800ms;
+            }
+        }
     }
 }
 
