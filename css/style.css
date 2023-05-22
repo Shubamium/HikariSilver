@@ -36,6 +36,17 @@
     rotate: 360deg;
   }
 }
+@keyframes twinkle {
+  from {
+    filter: brightness(140%) drop-shadow(0px 0px 14px rgb(219, 242, 127));
+  }
+  50% {
+    filter: brightness(120%) drop-shadow(0px 0px 1px white);
+  }
+  to {
+    filter: brightness(140%) drop-shadow(0px 0px 14px rgb(219, 242, 127));
+  }
+}
 body {
   background-color: rgb(255, 255, 255);
   background: url("../assets/pattern/purple_cross.png"), rgb(255, 255, 255);
@@ -111,6 +122,86 @@ h1, h2, h3 {
   left: 50%;
   z-index: 0;
   animation: speen 125s linear infinite;
+  transform-origin: 0% 50%;
+}
+#header .decor_moon-l {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  transform: translate(-50%);
+  top: 60%;
+  left: calc(50% - 540px);
+  z-index: 0;
+  animation: speen 50s linear infinite;
+  animation-direction: reverse;
+  transform-origin: 0% 50%;
+}
+#header .decor_moon-r {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  transform: translate(-50%);
+  top: -50%;
+  left: calc(50% + 540px);
+  z-index: 0;
+  animation: speen 150s linear infinite;
+  animation-direction: reverse;
+  transform-origin: 0% 50%;
+}
+#header .decor_ito-l {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  transform: translate(-50%);
+  left: calc(50% + 440px);
+  z-index: 0;
+  scale: 1.2;
+  transform-origin: 0% 50%;
+}
+#header .decor_ito-r {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  transform: translate(-50%);
+  left: calc(50% - 440px);
+  scale: 1.2;
+  z-index: 0;
+  transform-origin: 0% 50%;
+}
+#header .decor_starset-l {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  transform: translate(-50%);
+  left: calc(50% - 340px);
+  z-index: 0;
+  scale: 0.8;
+  animation: twinkle 5s infinite;
+  transform-origin: 0% 50%;
+}
+#header .decor_starset-r {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  transform: translate(-50%);
+  left: calc(50% + 340px);
+  top: 20%;
+  z-index: 0;
+  scale: 0.8;
+  animation: twinkle 10s infinite;
+  animation-delay: 1s;
   transform-origin: 0% 50%;
 }
 
@@ -260,8 +351,11 @@ h1, h2, h3 {
   content: url("../assets/decoration/frame_center.png");
   position: absolute;
   transform: translate(-50%);
-  left: 50%;
+  left: 43%;
   bottom: 30%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  scale: 0.7;
 }
 #social .links {
   min-height: 550px;
