@@ -225,6 +225,7 @@ h1, h2, h3 {
   margin-top: 120px;
 }
 #social .section-header {
+  position: relative;
   background: linear-gradient(180deg, #FAA5CD 0%, #FC9AE7 100%);
   display: flex;
   align-items: center;
@@ -254,6 +255,13 @@ h1, h2, h3 {
 }
 #social .section-header .decor_star:last-child {
   animation: speen 25s reverse infinite linear;
+}
+#social .section-header::before {
+  content: url("../assets/decoration/frame_center.png");
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+  bottom: 30%;
 }
 #social .links {
   min-height: 550px;
